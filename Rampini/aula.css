@@ -1,0 +1,31 @@
+* {
+    font-style: none;
+}
+
+p {
+    color: #133e7c;
+}
+
+img {
+    width: 300px;
+}
+
+ol li {
+    color: blue
+}
+
+ul li {
+    color: red;
+}
+
+dd {
+    color: blueviolet;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, a {
+    color: #d11f2b;
+}
