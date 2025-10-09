@@ -6,88 +6,76 @@
         <title>Aula 1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            img {
-                width: 300px;
-            }
-
-            ol li {
-                color: blue
-            }
-
-            ul li {
-                color: red;
-            }
-
-            dd {
-                color: blueviolet;
-            }
-
-            a {
-                text-decoration: overline;
-            }
-
-            td {
-                border: solid red 1px;
-            }
-
-        </style>
+        <link rel="stylesheet" href="aula.css">
 
     </head>
 
     <body>
+        <div>
+            <ul> 
+                <li><a href="">Home</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="">Sobre nós</a></li>
+            </ul>
+            
+            <ol start="S"> <!--1. 2. 3. ...-->
+                <li>Home</li>
+                <li>Contato</li>
+                <li>Sobre nós</li>
+            </ol>
 
-        <ul> 
-            <li><a href="">Home</a></li>
-            <li><a href="">Contato</a></li>
-            <li><a href="">Sobre nós</a></li>
-        </ul>
-        
-        <ol start="S"> <!--1. 2. 3. ...-->
-            <li>Home</li>
-            <li>Contato</li>
-            <li>Sobre nós</li>
-        </ol>
+            <dl>
+                <dt> Top 3 maneira de cumprimentar alguém:
+                    <dd>1. oi</dd>
+                    <dd>2. olá</dd>
+                    <dd>3. salve</dd>
+                </dt>
+            </dl>
 
-        <dl>
-            <dt> Top 3 maneira de cumprimentar alguém:
-                <dd>1. oi</dd>
-                <dd>2. olá</dd>
-                <dd>3. salve</dd>
-            </dt>
-        </dl>
+            <img src="https://m.media-amazon.com/images/S/pv-target-images/add6710539964e40bbbfb6497fd87f26d471eef74f9aca6708df2f2683be280d.jpg">
+            <img src="https://i0.wp.com/heroisx.com/wp-content/uploads/2018/08/Yusuke-forma-normal-transforma%C3%A7%C3%A3o-yu-yu-hakusho.png?resize=640%2C480">
+            
+            <p>Tabela:</p>
+            <table>
+                <tr>
+                    <td>O</td>
+                    <td>O</td>
+                    <td>X</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>X</td>
+                    <td>O</td>
+                    <td>X</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>X</td>
+                    <td>O</td>
+                    <td>O</td>
+                </tr>
+            </table>
+            
+            <form action="https://google.com/search" target="_blank">
+                <label for="Q">Pesquisa:</label>
+                <input type="text" name="q" id="q">
+                <input type="submit" value="PESQUISAR">
+            </form>
 
-        <img src="https://m.media-amazon.com/images/S/pv-target-images/add6710539964e40bbbfb6497fd87f26d471eef74f9aca6708df2f2683be280d.jpg">
-        <img src="https://i0.wp.com/heroisx.com/wp-content/uploads/2018/08/Yusuke-forma-normal-transforma%C3%A7%C3%A3o-yu-yu-hakusho.png?resize=640%2C480">
-        
-        <p>Tabela:</p>
-        <table>
-            <tr>
-                <td>O</td>
-                <td>O</td>
-                <td>X</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td>X</td>
-                <td>O</td>
-                <td>X</td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td>X</td>
-                <td>O</td>
-                <td>O</td>
-            </tr>
-        </table>
-        
-        <form action="https://google.com/search" target="_blank">
-            <label for="Q">Pesquisa:</label>
-            <input type="text" name="q" id="q">
-            <input type="submit" value="Botã">
-        </form>
+            <form action="https://google.com/search" target="_blank">
+                <label for="Q">bah meo</label>
+                <input type="date" name="q" id="q">
+                <input type="submit" value="legal">
+            </form>
+
+            <form action="https://google.com/search" target="_blank">
+                <label for="Q">maneiro</label>
+                <input type="color" name="q" id="q">
+                <input type="submit" value="pia de bosta">
+            </form>
+        </div>
 
     </body>
 
