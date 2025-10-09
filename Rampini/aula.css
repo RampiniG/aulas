@@ -26,10 +26,6 @@ a {
     text-decoration: none;
 }
 
-ul a {
+ul, a {
     color: #d11f2b;
-}
-
-.caixa {
-    border-color: #d11f2b;
 }
