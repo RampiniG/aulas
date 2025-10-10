@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
-ul, a {
+ul a {
     color: #d11f2b;
+}
+
+table, tr, td {
+    border: 1px solid #d11f2b;
 }
