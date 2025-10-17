@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container1 {
+    position: relative;
+    width: 450px;
+    float: left;
+    background-color: #5E5D5D;
+    color: #fff;
+    padding: 20px;
+}
+
+#container2 {
+    position: relative;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+img {
+    width: 225px;
+    height: 225px;
+    padding: 95px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
