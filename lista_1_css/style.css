@@ -6,20 +6,22 @@
 body {
     width: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
 }
 
 #container1 {
-    position: relative;
+    display: inline-block;
     width: 450px;
-    float: left;
+    min-height: 100vh;
     background-color: #5E5D5D;
     color: #fff;
     padding: 20px;
 }
 
 #container2 {
-    position: relative;
+    flex: 1;
     padding-left: 30px;
+    padding-right: 30px;
     padding-top: 30px;
 }
 
@@ -34,4 +36,17 @@ img {
     object-fit: cover;
 }
 
+.ano {
+    font-style: italic;
+    float: inline-end;
+}
 
+p, span {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul {
+  list-style-position: inside;
+}
