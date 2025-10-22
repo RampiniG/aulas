@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades de CSS</title>
+
+  <!-- 💡 Atividade 3 – CSS Interno -->
+  <style>
+    /* 💬 Atividade 1 – Exemplo de Regra CSS */
+    p {
+      font-size: 16px;
+    }
+
+    h1 {
+      text-align: center;
+      color: darkred;
+      font-family: Arial, sans-serif;
+    }
+
+    /*Atividade 2 – Parágrafos com fontes e cores diferentes */
+    .primeiro-paragrafo {
+      color: blue;
+      font-family: "Times New Roman", serif;
+    }
+
+    .segundo-paragrafo {
+      color: green;
+      font-family: Verdana, sans-serif;
+    }
+
+    .treceiro-paragrafo {
+      color: purple;
+      font-family: Courier, monospace;
+    }
+
+    /* Estilo para as palavras marcadas com <span> */
+    span {
+      font-weight: bold;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Atividade 1 – O que é uma regra CSS-->
+  <h1>O que é uma regra CSS?</h1>
+  <p>Uma <span>regra CSS</span> é um conjunto de instruções que define como elementos HTML devem ser exibidos.  
+     Ela contém um <span>seletor</span>, uma <span>propriedade</span> e um <span>valor</span>.</p>
+  <p>Exemplo: <code>p { color: blue; font-size: 16px; }</code></p>
+
+  <hr>
+
+  <!--Atividade 2 – Página com parágrafos e estilos-->
+  <h1>Exemplo de Estilos CSS</h1>
+
+  <p class="primeiro-paragrafo">Lorem <span>Ipsum</span> dolor sit amet, consectetur adipiscing elit.</p>
+  <p class="segundo-paragrafo">Vestibulum <span>CSS</span> vitae augue sed lorem suscipit tincidunt.</p>
+  <p class="treceiro-paragrafo">Integer <span>HTML</span> nec sapien eget nisl porttitor ultricies.</p>
+
+  <hr>
+
+  <!--Atividade 3 – Formas de incluir CSS-->
+  <h1>Formas de incluir CSS no HTML</h1>
+  <p><strong>1. Inline:</strong> dentro da tag HTML.<br>
+     Exemplo: <code>&lt;p style="color:red;"&gt;Texto vermelho&lt;/p&gt;</code></p>
+
+  <p><strong>2. Interno:</strong> dentro da tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code>.</p>
+
+  <p><strong>3. Externo:</strong> em um arquivo separado (ex: <code>estilo.css</code>) usando:<br>
+     <code>&lt;link rel="stylesheet" href="estilo.css"&gt;</code></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>   
+   <title>Exemplo especificidade de seletores</title>
+   <style>
+      /*toda teg li e tudo dentro dela ficará vermelho*/ li{color:red;}
+      /*itens com a class churras ficarão verdes*/ .churras{color:green;}
+      /*mesma coisa da class churras porém agora ficaram cinzas*/ .fruta{color:gray}
+      /*seleciona toda li com class churras que vem logo depois de outro li*/ li+li.churras{color: black;}
+      /*a class churras se torna arrasravél e fica magenta*/ .churras[draggable="true"]{color: magenta;}
+      /*três itens com os ID's #lip1,#lip2,#lip3 ficaram zuis*/ #lip1,#lip2,#lip3{color:blue}
+      /*o tem com o ID #lip3 e a class fruta ficrá laranja*/ #lip3.fruta{color:orange}
+      /*a li com ID #lip5, class churras e filho direto de ol (<ol><li></li</ol>) ficara roxo   */ ol>li.churras#lip5{color:purple}
+   </style>
+</head>
+<body>   
+   <ol>
+   <!--ID #lip0 n existe, mas, como Abacaxi está dentro de uma li ele ficará vermelho--> <li id="lip0">Abacaxi</li>
+   <!--Melão está dentro de uma li, porém, oque prevalece e o nível de especificidade e como contém a class fruta (mais específico) o Melão ficará cinza--> <li class="fruta">Melão</li>
+   <!--por nível de especificidade a Pera ficará azul--> <li id="lip2" class="fruta">Pera</li>
+   <!--por conta do ID #lip3 e da class fruta ficara laranja--> <li id="lip3" class="fruta">Uva</li>
+   <!--item 5--> <li id="lip4" class="fruta">Maçã</li>
+   <!--item 6--> <li class="churras">Carne</li>
+   <!--item 7--> <li class="churras">Linguiça</li>
+   <!--item 8--> <li id="lip5" class="churras" draggable="true">Pão de alho</li> <!--Professor, imagino que esse ID era para ser lip5, então eu irei mudar-->
+   </ol>   
+</body>
+</html>
