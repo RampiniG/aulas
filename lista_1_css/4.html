@@ -9,19 +9,19 @@
       /*a class churras se torna arrasravél e fica magenta*/ .churras[draggable="true"]{color: magenta;}
       /*três itens com os ID's #lip1,#lip2,#lip3 ficaram zuis*/ #lip1,#lip2,#lip3{color:blue}
       /*o tem com o ID #lip3 e a class fruta ficrá laranja*/ #lip3.fruta{color:orange}
-      /*a li com ID #lip5, class churras e filho direto de ol (<ol><li></li</ol>) ficara roxo   */ ol>li.churras#lip5{color:purple}
+      /*a li com ID #lip5, class churras e filho direto de ol (<ol><li></li</ol>) ficará roxo*/ ol>li.churras#lip5{color:purple}
    </style>
 </head>
 <body>   
    <ol>
-   <!--ID #lip0 n existe, mas, como Abacaxi está dentro de uma li ele ficará vermelho--> <li id="lip0">Abacaxi</li>
-   <!--Melão está dentro de uma li, porém, oque prevalece e o nível de especificidade e como contém a class fruta (mais específico) o Melão ficará cinza--> <li class="fruta">Melão</li>
+   <!--ID #lip0 n existe, mas, como Abacaxi está dentro de uma li então ele ficará vermelho--> <li id="lip0">Abacaxi</li>
+   <!--Melão está dentro de uma li, porém, oque prevalece é o nível de especificidade e como contém a class .fruta (mais específico) o Melão ficará cinza--> <li class="fruta">Melão</li>
    <!--por nível de especificidade a Pera ficará azul--> <li id="lip2" class="fruta">Pera</li>
-   <!--por conta do ID #lip3 e da class fruta ficara laranja--> <li id="lip3" class="fruta">Uva</li>
-   <!--item 5--> <li id="lip4" class="fruta">Maçã</li>
-   <!--item 6--> <li class="churras">Carne</li>
-   <!--item 7--> <li class="churras">Linguiça</li>
-   <!--item 8--> <li id="lip5" class="churras" draggable="true">Pão de alho</li> <!--Professor, imagino que esse ID era para ser lip5, então eu irei mudar-->
+   <!--por conta do ID #lip3 e da class .fruta ficara laranja--> <li id="lip3" class="fruta">Uva</li>
+   <!--o ID #lip4 não existe então a class .fruta prevalece--> <li id="lip4" class="fruta">Maçã</li>
+   <!--a class .churras permite arrastas os itens e os deixão magenta--> <li class="churras">Carne</li>
+   <!--class .churras e é seguido de li então Linguiça ficará preto--> <li class="churras">Linguiça</li>
+   <!--li filho direto de ol, class .churras, ID #lip5 e draggable="true", ou seja, ficará roxo e é arrastável--> <li id="lip7" class="churras" draggable="true">Pão de alho</li> <!--Professor, o ID estava lip7, imagino que era para ser lip5, caso realmente fosse lip7 o Pão de alho ficaria rosa por conta da class-->
    </ol>   
 </body>
 </html>
