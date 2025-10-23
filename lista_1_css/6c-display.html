@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .container {
+        border-left: 1px solid gray; 
+        border-bottom: 1px solid blue;
+        height: 70vh;
+        width: 70%;
+        position: absolute;
+        
+    }
+    
+    .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px; /* espessura da borda */
+        background: linear-gradient(to right, #ddd 50%, transparent 50%);
+    }
+
+
+    .caixa1 {
+        background-color: blue;
+        display: flex;  
+        align-items: top left;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .caixa2 {
+        background-color: green;
+        display: flex;
+        align-items: top left;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .caixa3 {
+        background-color: red;
+        display: flex;
+        align-items: top left;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .caixa4 {
+        background-color: yellow;
+        display: flex;
+        align-items: top left;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .caixa5 {
+        background-color: pink;
+        display: flex;
+        align-items: top left;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    </style>
+</head>
+
+<body class="container">
+        <div class="caixa1">
+            <p>Caixa 1</p>
+        </div>
+        <div class="caixa2">
+            <p>Caixa 2</p>
+        </div>
+        <div class="caixa3">
+            <p>Caixa 3</p>
+        </div>
+        <div class="caixa4">
+            <p>Caixa 4</p>
+        </div>
+        <div class="caixa5">
+            <p>Caixa 5</p>
+        </div>
+</body>
+
+</html>
