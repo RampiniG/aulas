@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        a:hover{
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        div {
+            height: 200px;
+            width: 500px;
+            position: absolute;
+            animation: andar 20s linear infinite;
+            color: yellow;
+            z-index: 3;
+        }
+
+        @keyframes andar {
+            from { left: -50px; }
+            to { left: 100vw; }
+        }
+
+        .container {
+            background-color: gray;
+        }
+
+        .container::after{
+            width: 200%;
+            height: 200px;
+            border-radius: 100%;
+            position: absolute;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="Q1.html" target="_blank">Clique aqui para voltar para a questão 1</a></p>
+    </div>
+</body>
+</html>
