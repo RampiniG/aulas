@@ -1,0 +1,59 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    
+
+div {
+    border-radius: 5%
+}
+
+.caixa1 {
+    flex: 1;
+    background-color: antiquewhite;
+    height: 300px;
+    width: 100px;
+}
+
+.caixa2 {
+    flex: 1;
+    background-color: black;
+    height: 100px;
+    width: 300px;
+}
+
+.caixa3 {
+    flex: 1;
+    background-color: blue;
+    height: 200px;
+    width: 400px;
+}
+
+.caixa4 {
+    flex: 1;
+    background-color: gold;
+    height: 450px;
+    width: 200px;
+}
+
+.caixa5 {
+    flex: 1;
+    background-color: green;
+    height: 300px;
+    width: 300px;
+}
+
+.caixa6 {
+    flex: 1;
+    background-color: gray;
+    height: 200px;
+    width: 450px;
+}
+
+.caixa7 {
+    flex: 1;
+    background-color: teal;
+    height: 500px;
+    width: 400px;
+}
