@@ -8,14 +8,13 @@
 </head>
 
 <body>
-
 <div class="calc">
     <div class="display" id="display">0</div>
 
     <div class="buttons">
         <button onclick="limpar()">C</button>
         <button onclick="apagar()">⌫</button>
-        <button onclick="pressionar('%')">%</button>
+        <button disabled class="disabled"></button> <!-- botão vazio só pra manter o layout -->
         <button class="op" onclick="pressionar('/')">÷</button>
 
         <button onclick="pressionar('7')">7</button>

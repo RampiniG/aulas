@@ -1,4 +1,4 @@
-let display = document.getElementById("display");
+ let display = document.getElementById("display");
 
     function pressionar(valor) {
         if (display.textContent === "0") {
@@ -23,7 +23,8 @@ let display = document.getElementById("display");
 
     function calcular() {
         try {
-            let resultado = eval(display.textContent);
+            let expressao = display.textContent;
+            let resultado = eval(expressao);
             display.textContent = resultado;
         } catch {
             display.textContent = "Erro";

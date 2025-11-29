@@ -68,3 +68,12 @@ body {
     .zero {
         grid-column: span 2;
     }
+
+    button:disabled {
+    background: #222;     /* mesma cor do fundo */
+    cursor: default;      /* cursor normal */
+    }
+
+    button:disabled:hover {
+        background: #222;     /* impede mudar cor no hover */
+    }
