@@ -7,7 +7,6 @@ body {
     background: #111;        
 }
 
-
 .cronometro {
     width: 200px;
     padding: 20px;
@@ -17,7 +16,6 @@ body {
     text-align: center;
     font-family: Arial;
     max-width: 200px;
-   display: block;
 }
 
 #display {
@@ -39,13 +37,4 @@ button {
 
 button:hover {
     background: #666;
-}
-
-#historico {
-    margin-top: 20px;
-    color: #ccc;
-    font-size: 14px;
-    max-height: 100px;
-    overflow-y: auto;
-    display: block;
 }

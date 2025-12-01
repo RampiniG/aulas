@@ -11,7 +11,7 @@ const reset = document.getElementById("reset");
 const historico = document.getElementById("historico");
 
 function atualizarDisplay() {
-    let m = minutos < 10 ? "0" + minutos : minutos;
+    let m = minutos < 10 ? "0" + minutos : minutos; // condição ? valor_se_verdadeiro : valor_se_falso
     let s = segundos < 10 ? "0" + segundos : segundos;
     let ms = milissegundos < 10 ? "0" + milissegundos : milissegundos;
 
@@ -52,7 +52,7 @@ startStop.addEventListener("click", function () {
 });
 
 reset.addEventListener("click", function () {
-   
+    clearInterval(intervalo);
     milissegundos = 0;
     segundos = 0;
     minutos = 0;
