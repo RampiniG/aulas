@@ -24,7 +24,7 @@
     function calcular() {
         try {
             let expressao = display.textContent;
-            let resultado = eval(expressao); 
+            let resultado = eval(expressao);
             display.textContent = resultado;
         } catch {
             display.textContent = "Erro";

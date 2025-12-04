@@ -11,7 +11,7 @@ const reset = document.getElementById("reset");
 const historico = document.getElementById("historico");
 
 function atualizarDisplay() {
-    let m = minutos < 10 ? "0" + minutos : minutos; // condição ? valor_se_verdadeiro : valor_se_falso
+    let m = minutos < 10 ? "0" + minutos : minutos;
     let s = segundos < 10 ? "0" + segundos : segundos;
     let ms = milissegundos < 10 ? "0" + milissegundos : milissegundos;
 
