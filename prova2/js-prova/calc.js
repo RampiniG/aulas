@@ -1,7 +1,7 @@
  let display = document.getElementById("display");
 
     function pressionar(valor) {
-        if (display.textContent === "0") {
+        if (display.textContent === "0" || display.textContent === "Erro") {
             display.textContent = valor;
         } else {
             display.textContent += valor;

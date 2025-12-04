@@ -70,6 +70,7 @@ button:hover {
 }
 
 button:disabled {
+    flex: 2;
     background: #222;     
     cursor: default;      
     color: #555;          
