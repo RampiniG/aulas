@@ -16,6 +16,7 @@ body {
     text-align: center;
     font-family: Arial;
     max-width: 200px;
+    max-height: 200px;
 }
 
 #display {
@@ -37,4 +38,27 @@ button {
 
 button:hover {
     background: #666;
+}
+
+.historico{
+    max-height: 50px;
+    overflow-y: auto;
+}
+
+.historico::-webkit-scrollbar {
+    width: 8px;
+}
+
+.historico::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+.historico::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.historico::-webkit-scrollbar-thumb:hover {
+    background: #777;
 }
