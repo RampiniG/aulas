@@ -36,7 +36,7 @@ function iniciarCronometro() {
 
 startStop.addEventListener("click", function () {
     if (!rodando) {
-        intervalo = setInterval(iniciarCronometro, 10); // 10 ms
+        intervalo = setInterval(iniciarCronometro, 10);
         startStop.textContent = "Parar";
         rodando = true;
     } else {
