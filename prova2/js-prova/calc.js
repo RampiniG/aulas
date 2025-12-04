@@ -1,8 +1,16 @@
- let display = document.getElementById("display");
- const operadores = "+-*/";
+let display = document.getElementById("display");
 
 function pressionar(valor) {
     const operadores = "+-*/";
+
+    if (display.textContent === "Erro") {
+        if (operadores.includes(valor)) {
+            display.textContent = "0" + valor;
+        } else {
+            display.textContent = valor;
+        }
+        return;
+    }
 
     if (display.textContent === "0" && !operadores.includes(valor)) {
         display.textContent = valor;
