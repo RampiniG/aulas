@@ -7,18 +7,17 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Bloco de Notas</h1>
+    <div id="lista">
+        <h2>Minhas Notas</h2>
+        <div id="notas"></div>
+        <button id="novaNota">+ Nova Nota</button>
+    </div>
 
-        <!-- Lista de notas -->
-        <ul id="listaNotas"></ul>
-
-        <!-- Botões -->
-        <div class="botoes">
-            <button onclick="criarNota()">Criar Nota</button>
-            <button onclick="editarNota()">Editar Nota</button>
-            <button class="excluir" onclick="excluirNota()">Excluir Nota</button>
-        </div>
+    <div id="editor">
+        <h2 id="tituloNota"></h2>
+        <textarea id="conteudo"></textarea><br>
+        <button id="salvar">Salvar</button>
+        <button id="excluir">Excluir</button>
     </div>
 
     <script src="js-prova/bloco.js"></script>

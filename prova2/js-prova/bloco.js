@@ -1,49 +1,90 @@
-let notas = [];
-let notaSelecionada = null;
+// Lista de notas (carrega do localStorage)
+let notas = JSON.parse(localStorage.getItem("notas")) || [];
 
-function listarNotas() {
-    const lista = document.getElementById("listaNotas");
+// Nota atualmente aberta
+let notaAtual = null;
+
+// Atualiza a lista no painel esquerdo
+function atualizarLista() {
+    const lista = document.getElementById("notas");
     lista.innerHTML = "";
 
     notas.forEach((nota, index) => {
-        const item = document.createElement("li");
-        item.textContent = nota.titulo;
-        item.onclick = () => abrirNota(index);
+        const item = document.createElement("div");
+        item.className = "nota-item";
+        item.textContent = nota.titulo || "Nota sem título";
+
+        // Abrir a nota ao clicar
+        item.addEventListener("click", () => abrirNota(index));
+
         lista.appendChild(item);
     });
 }
 
-function criarNota() {
-    const titulo = prompt("Título da nota:");
-    const texto = prompt("Texto da nota:");
-
-    if (!titulo || !texto) return;
-
-    notas.push({ titulo, texto });
-    listarNotas();
-}
-
+// Abre uma nota no editor
 function abrirNota(index) {
-    notaSelecionada = index;
-    alert("Título: " + notas[index].titulo + "\n\n" + notas[index].texto);
+    notaAtual = index;
+    const nota = notas[index];
+
+    document.getElementById("tituloNota").textContent = nota.titulo;
+    document.getElementById("conteudo").value = nota.conteudo;
 }
 
-function editarNota() {
-    if (notaSelecionada === null) return alert("Nenhuma nota aberta.");
+// Salva alterações da nota atual
+function salvarNota() {
+    if (notaAtual === null) return;
 
-    const novaNota = prompt("Novo texto:", notas[notaSelecionada].texto);
-    if (!novaNota) return;
+    const conteudo = document.getElementById("conteudo").value;
 
-    notas[notaSelecionada].texto = novaNota;
-    listarNotas();
+    // Primeira linha vira o título
+    const primeiraLinha = conteudo.split("\n")[0];
+
+    notas[notaAtual] = {
+        titulo: primeiraLinha || "Nota sem título",
+        conteudo: conteudo
+    };
+
+    salvarLocalStorage();
+    atualizarLista();
 }
 
-function excluirNota() {
-    if (notaSelecionada === null) return alert("Nenhuma nota aberta.");
-
-    if (confirm("Excluir esta nota?")) {
-        notas.splice(notaSelecionada, 1);
-        notaSelecionada = null;
-        listarNotas();
-    }
+// Salva no localStorage
+function salvarLocalStorage() {
+    localStorage.setItem("notas", JSON.stringify(notas));
 }
+
+// Criar nova nota
+document.getElementById("novaNota").addEventListener("click", () => {
+    notas.push({
+        titulo: "Nova nota",
+        conteudo: ""
+    });
+
+    notaAtual = notas.length - 1;
+    salvarLocalStorage();
+    atualizarLista();
+    abrirNota(notaAtual);
+});
+
+// Salvar
+document.getElementById("salvar").addEventListener("click", salvarNota);
+
+// Excluir com confirmação
+document.getElementById("excluir").addEventListener("click", () => {
+    if (notaAtual === null) return;
+
+    const certeza = confirm("Tem certeza que deseja excluir esta nota?");
+    if (!certeza) return;
+
+    notas.splice(notaAtual, 1); // remove a nota
+    salvarLocalStorage();
+    atualizarLista();
+
+    // Limpa o editor
+    notaAtual = null;
+    document.getElementById("tituloNota").textContent = "";
+    document.getElementById("conteudo").value = "";
+});
+
+// Inicializa a aplicação
+atualizarLista();
